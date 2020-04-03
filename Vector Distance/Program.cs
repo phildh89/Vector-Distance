@@ -106,8 +106,8 @@ namespace Vector_Distance
             //shortestDistance is 2000 to set a number that will be changes in the loop
             //first and second index are used to reference the element of the points
             double shortestDistance = 2000;
-            int firstIndex = 0;
-            int secondIndex = 0;
+            int firstElement = 0;
+            int secondElement = 0;
 
             //bool is count - 1 because the last element in the last has already been compared with the rest of the list.
             for (int i = 0; i < points2Ds.Count - 1; i++)
@@ -118,20 +118,20 @@ namespace Vector_Distance
                     if (tempDistance < shortestDistance)
                     {
                         shortestDistance = tempDistance;
-                        firstIndex = i;
-                        secondIndex = k;
+                        firstElement = i;
+                        secondElement = k;
                     }
                 }
             }
-            Console.WriteLine($"\n\tThe closest two 2D points are ({points2Ds[firstIndex].x2}, {points2Ds[firstIndex].y2}) and ({points2Ds[secondIndex].x2}, {points2Ds[secondIndex].y2}) with the distance of {shortestDistance}");
-            Console.WriteLine($"\tIndex 1 is {firstIndex} and index 2 is {secondIndex}");
+            Console.WriteLine($"\n\tThe closest two 2D points are ({points2Ds[firstElement].x2}, {points2Ds[firstElement].y2}) and ({points2Ds[secondElement].x2}, {points2Ds[secondElement].y2}) with the distance of {shortestDistance}");
+            Console.WriteLine($"\tThe first element is {firstElement} and the second element is {secondElement}");
 
         }
         public static void Compare3DPoints()
         {
             double shortestDistance = 9999999;
-            int firstIndex = 0;
-            int secondIndex = 0;
+            int firstElement = 0;
+            int secondElement = 0;
 
             for (int i = 0; i < points3Ds.Count - 1; i++)
             {
@@ -141,13 +141,13 @@ namespace Vector_Distance
                     if (tempDistance < shortestDistance)
                     {
                         shortestDistance = tempDistance;
-                        firstIndex = i;
-                        secondIndex = k;
+                        firstElement = i;
+                        secondElement = k;
                     }
                 }
             }
-            Console.WriteLine($"\n\tThe closest two 3D points are ({points3Ds[firstIndex].x3}, {points3Ds[firstIndex].y3}, {points3Ds[firstIndex].z3}) and ({points3Ds[secondIndex].x3}, {points3Ds[secondIndex].y3}, {points3Ds[secondIndex].z3}) with the distance of {shortestDistance}");
-            Console.WriteLine($"\tIndex 1 is {firstIndex} and index 2 is {secondIndex}");
+            Console.WriteLine($"\n\tThe closest two 3D points are ({points3Ds[firstElement].x3}, {points3Ds[firstElement].y3}, {points3Ds[firstElement].z3}) and ({points3Ds[secondElement].x3}, {points3Ds[secondElement].y3}, {points3Ds[secondElement].z3}) with the distance of {shortestDistance}");
+            Console.WriteLine($"\tThe first element is {firstElement} and the second element is {secondElement}");
         }
 
     }
